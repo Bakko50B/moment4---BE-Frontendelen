@@ -10,11 +10,29 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Moment 4 Backend - Frontenddelen</title>
+  <link rel="stylesheet" href="/src/style.css">
+  <script src="/js/logout.js" defer></script>
 </head>
 
 <body>
+
+  <header>
+    <nav>
+      <ul id="headmenu">
+        <li><a href="index.html" class="active">Hem</a></li>
+        <li id="adminLink"><a href="admin.html">Admin</a></li>
+        <li id="loginLink"><a href="login.html">Logga in</a></li>
+        <li id="logoutLink"><a href="#" onclick="logOut()" return="false">Logga ut</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <p>tes
+
+    </p>
+  </main>  
   <div id="app"></div>
-  <script type="module" src="/src/main.js"></script>
+  
 </body>
 
 </html>

@@ -1,22 +1,41 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/src/style.css">
+    <script src="/js/logout.js" defer></script>
     <script src="/js/login.js" defer></script>
     <title>Document</title>
 </head>
 <body>
+    <header>
+        <nav>
+          <ul id="headmenu">
+            <li><a href="index.html" >Hem</a></li>
+            <li id="adminLink"><a href="admin.html">Admin</a></li>
+            <li id="loginLink"><a href="login.html" class="active">Logga in</a></li>
+            <li id="logoutLink"><a href="#" onclick="logOut()" return="false">Logga ut</a></li>
+          </ul>
+        </nav>
+      </header>
     <main>
-        <form id="loginForm">
-            <label for="username">Användarnamn:</label><br>
-            <input type="text" id="username" name="username" required><br>
+        <div id="logindiv">
+            <form id="loginForm">
+                <label for="username">Användarnamn:</label>
+                <input type="text" id="username" name="username" required>
             
-            <label for="password">Lösenord:</label><br>
-            <input type="password" id="password" name="password" required><br><br>
-        
-            <button type="submit">Logga in</button>
-        </form>
+                <label for="password">Lösenord:</label>
+                <input type="password" id="password" name="password" required>
+            
+                <button type="submit">Logga in</button>
+                <p id="Message" style="display: none;"></p>
+            </form>
+        </div>
     </main>
     
 </body>

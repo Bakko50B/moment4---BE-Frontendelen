@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Tuffy:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Tuffy", sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -24,44 +26,112 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center; 
+  background-color: #f8f9fa; 
+  padding: 10px 0 0 0;
+}
 
-#app {
-  max-width: 1280px;
+#headmenu {
+  display: flex;  
+  width: 100%;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  justify-content: space-around; 
+  align-items: center; 
+}
+
+#headmenu a {
+  display: inline-block;
+  padding: 0 1rem;  
+  width: fit-content;
+}
+
+#headmenu a:hover{
+  background-color: #cfd1fe;
+}
+
+#headmenu .active{
+  background-color: #0f1019;;
+  color: whitesmoke;
+}
+
+main {
+  min-height: 50vh;;
+  max-height: max-content;
+  width: 80%;
   margin: 0 auto;
-  padding: 2rem;
+  background-color: whitesmoke;
+}
+
+.logindiv {
+  max-width: 300px;
+  margin: 10px auto;
+  padding: 10px;
+  box-sizing: border-box;
+  
+}
+
+#logindiv {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Gör den lika stor som skärmen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#loginForm {
+  min-width: 280px;
+  background-color: #535bf25e;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 10px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#loginForm button {
+  margin: 10px 0;
   text-align: center;
+  background-color: #535bf2;
+  color: white;
+  transition: .6s ;
+}
+#loginForm button:hover {
+  background-color: #171944;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
+#message {
+  color: black;
+  font-size: 0.9rem;
 }
 
-.card {
-  padding: 2em;
+.user-card {
+  width: 50%;
+  margin: 20px auto; 
+  border: 2px solid #535bf2;
+  padding: 10px;
+  border-radius: 10px;
 }
 
-.read-the-docs {
-  color: #888;
+.user-card h1 {
+  font-size: 1.5rem;
 }
+
 
 button {
   border-radius: 8px;
