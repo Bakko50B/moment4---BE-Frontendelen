@@ -16,8 +16,12 @@ body {
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 2.5em;
   line-height: 1.1;
+}
+
+h2 {
+  font-size: 2em;
 }
 header {
   width: 100%;
@@ -65,18 +69,38 @@ main {
   max-height: max-content;
   width: 80%;
   margin: 0 auto;
-  background-color: whitesmoke;
+  padding: 10px;
+  background-color: #242424;
 }
 
-.logindiv {
+.center {
+  text-align: center;
+}
+
+.green {
+  color: green;
+}
+
+.fromtop {
+  position: relative;
+  animation: fromtop 3s 1;
+}
+
+#infoindex {
+  font-size: 1.5em;
+}
+
+
+.logindiv,
+.registerdiv {
   max-width: 300px;
   margin: 10px auto;
   padding: 10px;
-  box-sizing: border-box;
-  
+  box-sizing: border-box;  
 }
 
-#logindiv {
+#logindiv,
+#registerdiv {
   position: relative;
   width: 100%;
   height: 100vh; /* Gör den lika stor som skärmen */
@@ -86,7 +110,8 @@ main {
 }
 
 
-#loginForm {
+#loginForm,
+#registerForm {
   min-width: 280px;
   background-color: #535bf25e;
   display: flex;
@@ -95,17 +120,31 @@ main {
   border-radius: 10px;
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 10em;
   transform: translate(-50%, -50%);
 }
 
-#loginForm button {
+#loginForm button,
+#registerForm button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit; 
   margin: 10px 0;
   text-align: center;
   background-color: #535bf2;
   color: white;
   transition: .6s ;
 }
+
+@keyframes fromtop {
+  from { transform: translateY(-100px);}
+  to   { transform: translateY(0px);}  
+}
+
+#registerForm button:hover,
 #loginForm button:hover {
   background-color: #171944;
 }
@@ -115,37 +154,45 @@ main {
   font-size: 0.9rem;
 }
 
-
 .user-card {
   width: 50%;
   margin: 20px auto; 
   border: 2px solid #535bf2;
   padding: 10px;
   border-radius: 10px;
+  box-sizing: border-box;
+  transition: .6s;
 }
 
+.user-card:hover {
+  transform: translate(-10px, -10px);
+  box-shadow: 10px 10px 10px blacK;
+}
 .user-card h1 {
   font-size: 1.5rem;
 }
 
+footer {
+  width: 100%;
+  background-color: #010b66;
+  color: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3em;
+}
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+footer a{
+  text-decoration: none;
+  color: white;
+  transition: .6s linear;
 }
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+
+footer a:hover {  
+  color: rgb(232, 246, 142);
+  /* font-weight: 700; */
+  font-size: 1.3em;
+  font-style: italic;
 }
 
 @media (prefers-color-scheme: light) {
@@ -159,11 +206,19 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+
+  main {
+    
+    background-color: whitesmoke;
+  }
 }
 
-
 @media (max-width: 680px){
+  main {
+    width: 100%;
+    box-sizing: border-box;
+  }
   .user-card {
-    width: 90%; 
+    width: 96%; 
   }
 }
