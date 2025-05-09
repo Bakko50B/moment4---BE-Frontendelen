@@ -11,8 +11,12 @@
 
 }
 
+html,
 body {
+  height: 100%;
   margin: 0;
+  display: flex;
+  flex-direction: column; 
 }
 
 h1 {
@@ -23,53 +27,53 @@ h1 {
 h2 {
   font-size: 2em;
 }
+
 header {
   width: 100%;
   display: flex;
-  justify-content: center; 
-  background-color: #f8f9fa; 
+  justify-content: center;
+  background-color: #f8f9fa;
   padding: 10px 0 0 0;
 }
 
 #headmenu {
-  display: flex;  
+  display: flex;
   width: 100%;
   list-style-type: none;
   padding: 0;
   margin: 0;
-  justify-content: space-around; 
-  align-items: center; 
+  justify-content: space-around;
+  align-items: center;
 }
 
 #headmenu a {
   display: inline-block;
-  padding: 0 1rem;  
+  padding: 0 1rem;
   width: fit-content;
-  color: #030a90; 
+  color: #030a90;
   text-decoration: none;
   font-weight: 500;
   transition: .6s;
 }
 
 
-#headmenu a:hover{
+#headmenu a:hover {
   background-color: #cfd1fe;
   color: #5f005c;
   /* font-variant: small-caps;
   font-weight: 700; */
-} 
+}
 
-#headmenu .active{
-  background-color: #010b66;;
+#headmenu .active {
+  background-color: #010b66;
   color: whitesmoke;
 }
 
 main {
-  min-height: 50vh;;
-  max-height: max-content;
+  flex: 1;
   width: 80%;
   margin: 0 auto;
-  padding: 10px;
+  padding: 10px 10px 6em 10px;
   background-color: #242424;
 }
 
@@ -96,14 +100,15 @@ main {
   max-width: 300px;
   margin: 10px auto;
   padding: 10px;
-  box-sizing: border-box;  
+  box-sizing: border-box;
 }
 
 #logindiv,
 #registerdiv {
   position: relative;
   width: 100%;
-  height: 100vh; /* Gör den lika stor som skärmen */
+  height: 100vh;
+  /* Gör den lika stor som skärmen */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -131,17 +136,22 @@ main {
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
-  font-family: inherit; 
+  font-family: inherit;
   margin: 10px 0;
   text-align: center;
   background-color: #535bf2;
   color: white;
-  transition: .6s ;
+  transition: .6s;
 }
 
 @keyframes fromtop {
-  from { transform: translateY(-100px);}
-  to   { transform: translateY(0px);}  
+  from {
+    transform: translateY(-100px);
+  }
+
+  to {
+    transform: translateY(0px);
+  }
 }
 
 #registerForm button:hover,
@@ -156,7 +166,7 @@ main {
 
 .user-card {
   width: 50%;
-  margin: 20px auto; 
+  margin: 20px auto;
   border: 2px solid #535bf2;
   padding: 10px;
   border-radius: 10px;
@@ -168,11 +178,14 @@ main {
   transform: translate(-10px, -10px);
   box-shadow: 10px 10px 10px blacK;
 }
+
 .user-card h1 {
   font-size: 1.5rem;
 }
 
 footer {
+  position: fixed;
+  bottom: 0;
   width: 100%;
   background-color: #010b66;
   color: whitesmoke;
@@ -182,13 +195,14 @@ footer {
   height: 3em;
 }
 
-footer a{
+footer a {
+  
   text-decoration: none;
   color: white;
   transition: .6s linear;
 }
 
-footer a:hover {  
+footer a:hover {
   color: rgb(232, 246, 142);
   /* font-weight: 700; */
   font-size: 1.3em;
@@ -200,25 +214,28 @@ footer a:hover {
     color: #213547;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
   }
 
   main {
-    
+
     background-color: whitesmoke;
   }
 }
 
-@media (max-width: 680px){
+@media (max-width: 680px) {
   main {
     width: 100%;
     box-sizing: border-box;
   }
+
   .user-card {
-    width: 96%; 
+    width: 96%;
   }
 }
