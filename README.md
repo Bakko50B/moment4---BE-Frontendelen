@@ -1,4 +1,4 @@
-# En frontenddel till Moment 4 i Backendkur
+# En frontenddel till Moment 4 i Backendkurs
 För att öva gjorde jag denna del i Vite.  
 Vite är ett byggverktyg som finns som ett npm paket  
 
