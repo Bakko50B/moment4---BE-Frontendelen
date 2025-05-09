@@ -29,10 +29,9 @@ Admin.html kräver en giltig token skapad på serverdelen, den skapas vid inlogg
 Om det saknas en giltig koppling på serverdelen så visas minimal information.  
 För att kunna använda admin.html finns en länk från index.html för att skapa sig ett inlogg.  
 Detta projekt fokuserar på att **demonstrera hantering av autentisering och auktorisering**.  
-Det är inte optimerat för produktion, utan används för inlärningssyften inom Moment 4.
+Det är inte optimerat för produktion, utan används för inlärningssyften inom Moment 4.  
+Det finns även en logga-ut funktion som endast leder till en JavaScript-fil.  
   
-
-Det finns även en logga utfunktion som endast leder till en javaScript-fil.
 JWT-token som skapas på serverdelen gör det möjligt att hantera och ta bort utgångna tokens på klientsidan. De lagras i localStorage efter inloggning. Använder delvis en annan teknik än den som finns i kursmaterialet.  
  
 ## Av
