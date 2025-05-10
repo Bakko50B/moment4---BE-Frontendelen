@@ -1,11 +1,13 @@
-"use strict"
+"use strict";
 
+//Hantering av admin.html
+// Kontroll av token med giltighet om den hittas
 document.addEventListener("DOMContentLoaded", async () => {
-    const token = localStorage.getItem("moment4_token"); // Hämta token från localStorage
+    const token = localStorage.getItem("moment4_token");    // Hämta token från localStorage
 
     if (!token) {
         console.error("Ingen token hittades, omdirigerar till login...");
-        window.location.href = "login.html"; // Omdirigera om ingen token finns
+        window.location.href = "login.html";                // Omdirigera om ingen token finns
         return;
     }
 
@@ -13,7 +15,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         const response = await fetch("http://localhost:3000/api/protected", {
             method: "GET",
             headers: {
-                "Authorization": `Bearer ${token}`, // Skicka token för autentisering
+                "Authorization": `Bearer ${token}`,         // Skicka token för autentisering
                 "Content-Type": "application/json"
             }
         });
@@ -22,7 +24,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         if (response.ok) {
             console.log("Skyddad data hämtad:", data);
-            displayUsers(data.users); // Visa användarna på sidan
+            displayUsers(data.users);                       // Visa användarna på sidan
         } else {
             console.error("Fel vid hämtning:", data.error);
         }
@@ -33,9 +35,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 function displayUsers(users) {
     const userContainer = document.getElementById("userList");
-    userContainer.innerHTML = "";
-    let numberOfUsers = 1;
-
+    userContainer.innerHTML = "";                           // Tömmer taggen
+    let numberOfUsers = 1;                                  // Antalet användare
    
     users.forEach(user => {
         const userItem = document.createElement("div");

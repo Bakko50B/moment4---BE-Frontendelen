@@ -1,3 +1,8 @@
+"use strict";
+/**
+ * script för att registrera ny användare
+ * Inkluderar felmeddelanden
+ */
 document.getElementById("registerForm").addEventListener("submit", async (event) => {
     event.preventDefault();
 

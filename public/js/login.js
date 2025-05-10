@@ -1,5 +1,8 @@
 "use strict";
 
+// Skickar till loginroute på servern
+// Hanterar och kontrollerar de inmatade inloggningsvärderna
+// används på login.html
 document.getElementById("loginForm").addEventListener("submit", async (event) => {
     event.preventDefault();
 

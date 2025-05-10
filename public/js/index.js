@@ -1,5 +1,8 @@
-"use strict"
+"use strict";
 
+ // Koll på om det finns token i LocalStorage
+ // Koll om den är giltig fortfarande 
+ // Används i index.html
 function checkToken() {
     const token = localStorage.getItem("moment4_token");
 
